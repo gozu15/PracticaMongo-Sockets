@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chat Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #partidos {
+        border-collapse: collapse;
+        border: 1px solid blue;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #partidos tr {
+        border-bottom: 1px solid blue;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    #partidos tr td,
+    #partidos tr th {
+        padding: 10px;
+    }
+    .votarclick{
+        padding: 10px;
+        height: 25px;
+        width: 100px;
+    }
+    .votarclick button{
+        height: 25px;
+        width: 100px;
+        border-radius: 51px 51px 51px 51px;
+        -moz-border-radius: 51px 51px 51px 51px;
+        -webkit-border-radius: 51px 51px 51px 51px;
+        background-color:#FF8000;
+        text-align: center;
+        color: white;
+       
+    }
+    
+    .contenedor-tabla {
+        width: 90%;
+        margin: auto;
+        border: 3px solid black;
+        display: table;
+    }
+    
+    .contenedor-fila {
+        display: table-row;
+       
+    }
+    
+    .contenedor-columna {
+        margin-top: 20px;
+        margin-left: 20px;
+       float: left;
+       
+       width: 45%;
+    }
+</style>
+
+<body>
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                
+                    <div class="contenedor-tabla">
+                        <div class="contenedor-fila">
+                            <div class="contenedor-columna">
+                                <table id="partidos" class="partidos">
+                                </table>
+                                <div class="votarclick" id="boton">
+
+                                </div>
+                            </div>
+
+                            <div class="contenedor-columna">
+                                <td>
+
+                                    <div id="grafica1">
+                                    </div>
+
+                                    <div class="donainfo" id="myLegend3"></div>
+                                    <br>
+                                    <h4>
+                                        VOTOS
+                                    </h4>
+                                    <div class="dona2" id="myLegend4"></div>
+                                </td>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </li>
+        <li class="login page ">
+            <div class="form ">
+                <!--(1)     INGRESE SU CARNET-->
+                <h3 class="title ">ingrese su numero de carnet</h3>
+                <input class="carnet " type="text " maxlength="14 " />
+
+            </div>
+        </li>
+        <div>
+
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js "></script>
+    <script src="/socket.io/socket.io.js "></script>
+    <script src="/main.js "></script>
+    <script src="/grafica.js"></script>
+</body>
+
+</html>
